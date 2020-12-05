@@ -1,0 +1,13 @@
+ports:
+- port: 8050
+  onOpen: open-preview
+- port: 8888
+  onOpen: open-browser
+tasks:
+- init: /workspace/dash-and-jupyter-notebook-with-gitpod/run.sh
+  command: cp -r /workspace/dash-and-jupyter-notebook-with-gitpod/.jupyter /home/gitpod/
+image:
+  file: .gitpod.Dockerfile
+vscode:
+  extensions:
+    - Ikuyadeu.r@1.4.4:rKTc3B5ezErFfzQ2+lZ2Cw==
