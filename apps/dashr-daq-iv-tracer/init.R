@@ -11,28 +11,29 @@ options(repos=r)
 install.packages("remotes")
 
 # installs Rcpp, rlang, BH
-install.packages("later")
-install.packages("jsonlite")
+# install.packages("later")
+# install.packages("jsonlite")
 
-install.packages("listenv")
+# install.packages("listenv")
 
-install.packages("magrittr")
+# install.packages("magrittr")
 
-install.packages("manhattanly")
+# install.packages("manhattanly")
 
-install.packages("RCurl")
-install.packages("readr")
+# install.packages("RCurl")
+# install.packages("readr")
 
+install.packages("dashDaq")
 
 # fiery and friends
-install.packages("https://cloud.r-project.org/src/contrib/routr_0.3.0.tar.gz", type="source", repos=NULL)
-install.packages("https://cloud.r-project.org/src/contrib/fiery_1.1.1.tar.gz", type="source", repos=NULL)
+# install.packages("https://cloud.r-project.org/src/contrib/routr_0.3.0.tar.gz", type="source", repos=NULL)
+# install.packages("https://cloud.r-project.org/src/contrib/fiery_1.1.1.tar.gz", type="source", repos=NULL)
 
 
 
 
-remotes::install_github("plotly/dashR", dependencies=TRUE)
-remotes::install_github("plotly/dash-html-components")
-remotes::install_github("plotly/dash-core-components")
-remotes::install_github("plotly/dash-daq", dependencies=TRUE)
+# remotes::install_github("plotly/dashR", dependencies=TRUE)
+# remotes::install_github("plotly/dash-html-components")
+# remotes::install_github("plotly/dash-core-components")
+# remotes::install_github("plotly/dash-daq", dependencies=TRUE)
 

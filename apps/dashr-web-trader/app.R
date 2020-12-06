@@ -31,7 +31,7 @@ for (df in currencyPairs){
   df[, Date := fastPOSIXct(Date, tz = myTZ)]
 }
 
-app <- Dash$new(name = "DashR Web Trader")
+app <- Dash$new()
 
 app$layout(
   htmlDiv(
@@ -1545,6 +1545,8 @@ app$callback(
   }
 )
 
-if (appName == ""){
-  app$run_server(debug = TRUE)
-} else {app$run_server(host = "0.0.0.0", port = Sys.getenv('PORT', 8080))}
+app$run_server( showcase=FALSE )
+
+# if (appName == ""){
+#   app$run_server(debug = TRUE, showcase=FALSE )
+# } else {app$run_server(host = "0.0.0.0", port = Sys.getenv('PORT', 8080), showcase=FALSE )}

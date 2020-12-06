@@ -8,10 +8,10 @@ options(repos=r)
 
 # ======================================================================
 
-remotes::install_github("plotly/dash-table", ref="4.0.0-cran")
-remotes::install_github("plotly/dash-html-components", ref="1.0.0-cran")
-remotes::install_github("plotly/dash-core-components", ref="1.0.0-cran")
-remotes::install_github("plotly/dashR", ref="0.1.0-cran")
+# remotes::install_github("plotly/dash-table", ref="4.0.0-cran")
+# remotes::install_github("plotly/dash-html-components", ref="1.0.0-cran")
+# remotes::install_github("plotly/dash-core-components", ref="1.0.0-cran")
+# remotes::install_github("plotly/dashR", ref="0.1.0-cran")
 
 install.packages("xts")
 install.packages("fasttime")
