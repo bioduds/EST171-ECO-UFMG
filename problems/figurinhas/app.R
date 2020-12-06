@@ -11,10 +11,10 @@ app$layout(
   htmlDiv(
     list(
       dccInput( id="graphTitle", value="Figurinhasss", type="text" ),
-      htmlDiv( id = "outputID" ),
-      dccGraph( id = "giraffe",
+      htmlDiv( id="outputID" ),
+      dccGraph( id="plota",
                 figure = list(
-                    data = list( x=c( 1, 2, 3 ), y=c( 3, 2, 8 ), type="bar" ),
+                    data = list( x=c( 1, 2, 3 ), y=c( 3, 2, 8 ), type="scatter" ),
                     layout = list( title="Let's Simulate!" )
         )
       )
@@ -22,7 +22,7 @@ app$layout(
   )
 )
 
-app$callback( output=list( id="giraffe", property="figure" ),
+app$callback( output=list( id="plota", property="figure" ),
               params=list( input( "graphTitle", "value" ) ),
               function( newTitle ) {
                  rand1 <- sample( 1:100, 1 )
@@ -38,8 +38,8 @@ app$callback( output=list( id="giraffe", property="figure" ),
                  list(
                    data =
                      list(
-                       list( x=df$x, y=df$y, type="scatter" ),
-                       list( x=df$x, y=df$y2, type="scatter" )
+                       list( x=df$x, y=df$y, type="box" ),
+                       list( x=df$x, y=df$y2, type="box" )
                      ),
                    layout = list( title=newTitle )
                  )
@@ -51,10 +51,8 @@ app$callback( output=list( id="outputID", property="children" ),
               function( x, y ) {
 
                 ##############################################################################################
-                S = 300
-                N = 10
-                print( paste( "Simulacoes:", S ) )
-                print( paste( "Tamanho do Album:", N ) )
+                S = 3000
+                N = 25
                 allDraws = c()
                 for( i in 1:S ) {
                     #print( paste( "Simulação", i ) )
@@ -69,8 +67,6 @@ app$callback( output=list( id="outputID", property="children" ),
                     allDraws <- append( allDraws, draws )
                 }
                 resp = round( mean( allDraws ) )
-                print( paste( "Numero de Compras de pacotes com uma figurinha:", resp ) )
-                print( paste( "Valor Esperado:", round( ( N * log( N ) ) ) ) )
                 ##############################################################################################
 
                 sprintf( "Numero de Compras de pacotes com uma figurinha: %s", resp )
