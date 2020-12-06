@@ -3,11 +3,11 @@
 
 library( plotly )
 
-S = c( 3, 30, 300 )
-N = 100
+S = 1:200
+N = 10
 allMedias = c()
 
-for( band in length(S) ) {
+for( band in 1:length(S) ) {
     allDraws = c()
     for( i in 1:S[band] ) {
         draws = 0
@@ -20,11 +20,11 @@ for( band in length(S) ) {
         }
         allDraws <- append( allDraws, draws )
     }
-    allMedias <- append( allMedias, allDraws )
+    allMedias <- append( allMedias, mean( allDraws[band] ) )
 }
+print( allMedias )
 
-
-fig <- plot_ly( data = iris, x = 1:length(allMedias), y = allMedias,
+fig <- plot_ly( type="scatter", x=1:length(S), y = allMedias,
                 marker = list( size=length(allMedias), color='rgba(255, 182, 193, .9)', line=list( color='rgba(152, 0, 0, .8)', width=2 ) ) )
 fig <- fig %>% layout( title = 'Compras de Figurinhas',
          yaxis = list( zeroline = FALSE ),
@@ -41,7 +41,7 @@ app <- Dash$new()
 app$layout(
     htmlDiv(
         list(
-            htmlDiv( allMedias ),
+            htmlDiv( allMedias[0] ),
             dccGraph( figure=fig ) 
         )
     )
