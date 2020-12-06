@@ -7,4 +7,3 @@ RUN pip3 install dash-daq
 RUN pip3 install jupyter pandas matplotlib
 RUN pip install dash-auth
 RUN pip install black
-RUN Rscript init.R
