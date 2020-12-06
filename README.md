@@ -1,4 +1,11 @@
-# Dash Sample Apps [![CircleCI](https://circleci.com/gh/plotly/dash-sample-apps.svg?style=svg)](https://circleci.com/gh/plotly/dash-sample-apps)
+# EST171 - Estatística Computacional e Otimização - UFMG
+
+### Eduardo Capanema (eduardocapanema@ufmg.br)
+
+### Professor: Luiz Henrique Duczmal (Estatísica UFMG)
+
+---
+### Clonado de: Dash Sample Apps [![CircleCI](https://circleci.com/gh/plotly/dash-sample-apps.svg?style=svg)](https://circleci.com/gh/plotly/dash-sample-apps)
 
 This is a monorepo designed to host all of the apps that have been
 created for the Python Dash Gallery.
